@@ -34,7 +34,7 @@
       .hidden-xs
         %ul.nav.navbar-nav
           %li
-            %a{href: "#"} Home
+            = link_to 'Home', root_path
           %li.dropdown
             %a.dropdown-toggle{href: "#", 'data-toggle': "dropdown", role: "button", 'aria-haspopup': "true", 'aria-expanded': "false"} Shop
             %ul.dropdown-menu
@@ -49,3 +49,5 @@
                 %a{href: "#"} Log out
           %li
             %a{href: "#"} My account
+          %li= link_to 'Log in', new_user_session_path
+          %li= link_to 'Sign up', new_user_registration_path

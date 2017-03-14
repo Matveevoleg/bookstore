@@ -22,6 +22,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
 gem 'haml', '~> 4.0', '>= 4.0.7'
 gem 'haml-rails'
+gem 'devise'
 # gem 'redis', '~> 3.0'
 
 # gem 'bcrypt', '~> 3.1.7'
