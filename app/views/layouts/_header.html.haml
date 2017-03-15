@@ -30,7 +30,7 @@
               %li
                 %a.collapse-link{href: "#"} Web design
           %li
-            %a{href: "#"} My account
+            = link_to 'My account', root_path
       .hidden-xs
         %ul.nav.navbar-nav
           %li
@@ -48,6 +48,13 @@
               %li
                 %a{href: "#"} Log out
           %li
-            %a{href: "#"} My account
-          %li= link_to 'Log in', new_user_session_path
-          %li= link_to 'Sign up', new_user_registration_path
+            = link_to 'My account', root_path
+
+          - if user_signed_in?
+            %li
+              = link_to "Log out", destroy_user_session_path, method: :delete, class: "collapse-link"
+          - else
+            %li
+              = link_to 'Log in', new_user_session_path
+            %li
+              = link_to 'Sign up', new_user_registration_path
