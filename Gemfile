@@ -25,7 +25,6 @@ gem 'haml-rails'
 gem 'devise'
 gem 'omniauth'
 gem 'omniauth-facebook'
-gem 'omniauth-google-oauth2'
 
 gem 'rails_admin', '~> 1.1.1'
 # gem 'redis', '~> 3.0'
