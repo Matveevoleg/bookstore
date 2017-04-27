@@ -19,9 +19,10 @@
         %li
           %a{href: "#"} Orders
         %li.divider{role: "separator"}
-        %li
-          = link_to ('admin_panel'), rails_admin.dashboard_path
-        %li.divider{role: "separator"}
+        - if can? :access, :rails_admin
+          %li
+            = link_to ('Dashboard'), rails_admin.dashboard_path
+          %li.divider{role: "separator"}
         %li
           = link_to "Log out", destroy_user_session_path, method: :delete, class: "collapse-link"
   - else
