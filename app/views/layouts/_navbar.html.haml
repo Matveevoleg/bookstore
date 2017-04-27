@@ -15,11 +15,12 @@
       %a.dropdown-toggle{href: "#", 'data-toggle': "dropdown", role: "button", 'aria-haspopup': "true", 'aria-expanded': "false"} My account
       %ul.dropdown-menu
         %li
-          %a{href: "#"} Mobile development
+          %a{href: "#"} Settings
         %li
-          %a{href: "#"} Photo
+          %a{href: "#"} Orders
+        %li.divider{role: "separator"}
         %li
-          %a{href: "#"} Web design
+          = link_to ('admin_panel'), rails_admin.dashboard_path
         %li.divider{role: "separator"}
         %li
           = link_to "Log out", destroy_user_session_path, method: :delete, class: "collapse-link"

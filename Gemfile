@@ -28,9 +28,17 @@ gem 'omniauth-facebook'
 
 gem 'rails_admin', '~> 1.1.1'
 
+gem 'rails-i18n'
+
+group :test do
+  gem 'capybara'
+  gem 'database_cleaner'
+end
+
 group :development, :test do
-  
   gem 'byebug', platform: :mri
+  gem 'rspec-rails'
+  gem 'factory_girl_rails'
 end
 
 group :development do
