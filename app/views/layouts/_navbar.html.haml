@@ -1,15 +1,14 @@
 %ul.nav.navbar-nav
-  %li
-    = link_to 'Home', root_path
   %li.dropdown
-    %a.dropdown-toggle{href: "#", 'data-toggle': "dropdown", role: "button", 'aria-haspopup': "true", 'aria-expanded': "false"} Shop
+    %a.dropdown-toggle{href: "#", 'data-toggle': "dropdown", role: "button", 'aria-haspopup': "true", 'aria-expanded': "false"} Home
     %ul.dropdown-menu
-      %li
-        %a{href: "#"} Mobile development
-      %li
-        %a{href: "#"} Photo
-      %li
-        %a{href: "#"} Web design
+      - all_categories.each do |category|
+        %li
+          %a{href: "#"} 
+            =category.title
+  %li
+    = link_to 'Shop', root_path
+
   - if signed_in?
     %li.dropdown
       %a.dropdown-toggle{href: "#", 'data-toggle': "dropdown", role: "button", 'aria-haspopup': "true", 'aria-expanded': "false"} My account
