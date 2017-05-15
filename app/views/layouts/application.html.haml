@@ -11,6 +11,9 @@
 
   %body
     = render 'layouts/header' 
+    - flash.each do |curr_class, message| 
+      %div{class: "alert alert-#{check_class(curr_class)}"}
+        = message
     = yield
     = render 'layouts/footer'
 

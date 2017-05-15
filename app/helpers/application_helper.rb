@@ -1,14 +1,14 @@
 module ApplicationHelper
 
-# 	def general_simple_form_for(path, options = {}, &block)
-#     options = options.deep_merge(html: { class: 'general-form' },
-#       defaults: { input_html: { class: 'form-control' } })
-#     simple_form_for(path, options, &block)
-#   end
-
 	def all_categories
 		Category.all
 	end
 
-
+	def check_class(key)
+		case key
+    		when 'notice' then 'success'
+   			when 'alert' then 'warning'
+    		else key
+    	end
+    end
 end

@@ -16,22 +16,11 @@
           %li
             %a{href: "#"} Price: Low to hight
     %ul.list-inline.pt-10.mb-25.mr-240
-      %li.mr-35
-        %a.filter-link{href: "#"}
-          All
-          %span.badge.general-badge 135
-      %li.mr-35
-        %a.filter-link{href: "#"}
-          Mobile Development
-          %span.badge.general-badge 135
-      %li.mr-35
-        %a.filter-link{href: "#"}
-          Photo
-          %span.badge.general-badge 135
-      %li.mr-35
-        %a.filter-link{href: "#"}
-          Web Design
-          %span.badge.general-badge 135
+      -all_categories.each do |category|
+        %li.mr-35
+          %a.filter-link{href: "#"}
+            =category.title
+            %span.badge.general-badge 0
   .mb-40.visible-xs
     %p.in-grey-600.small.mb-10 Filter by category
     .dropdown.mb-20
