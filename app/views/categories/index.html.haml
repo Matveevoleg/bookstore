@@ -16,11 +16,17 @@
           %li
             %a{href: "#"} Price: Low to hight
     %ul.list-inline.pt-10.mb-25.mr-240
+      %li.mr-35
+        %a.filter-link{href: categories_path}
+          All
+          %span.badge.general-badge
+            =books_count
       -all_categories.each do |category|
         %li.mr-35
           %a.filter-link{href: "#"}
             =category.title
-            %span.badge.general-badge 0
+            %span.badge.general-badge
+              =category.books.count
   .mb-40.visible-xs
     %p.in-grey-600.small.mb-10 Filter by category
     .dropdown.mb-20
